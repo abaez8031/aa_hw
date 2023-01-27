@@ -1,20 +1,28 @@
 class Stack
+  attr reader :data
   
   def initialize()
     @data = []
   end
 
   def push(ele)
-    @data << ele
-    self
+    data << ele
   end
 
   def pop
-    @data.pop
+    data.pop
   end
 
   def peek
-    @data.first
+    data.last
+  end
+
+  def size
+    data.length
+  end
+
+  def empty?
+    data.empty?
   end
 
 end
