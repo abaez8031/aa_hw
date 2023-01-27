@@ -1,6 +1,6 @@
 class Stack
-  attr reader :data
-  
+  attr_reader :data
+
   def initialize()
     @data = []
   end
