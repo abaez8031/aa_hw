@@ -1,5 +1,4 @@
 class Stack
-  attr_reader :data
 
   def initialize()
     @data = []
@@ -7,6 +6,7 @@ class Stack
 
   def push(ele)
     data << ele
+    self
   end
 
   def pop
@@ -25,6 +25,12 @@ class Stack
     data.empty?
   end
 
+  def inspect
+    "#<Stack:#{self.object_id}>"
+  end
+
+  private
+  attr_reader :data
 end
 
 # a = Stack.new
@@ -33,25 +39,34 @@ end
 # a.push("hey")
 # a.peek
 
-class Queue
+class MyQueue
 
   def initialize
     @data = []
   end
 
   def enqueue(ele)
-    @data << ele
+    data << ele
     self
   end
 
   def dequeue
-    @data.shift
+    data.shift
   end
 
-  def peek
-    @data.first
+  def show
+    data.dup
   end
 
+  def size
+  end
+
+  def empty?
+    data.empty?
+  end
+
+  private
+  attr_reader :data
 end
 
 # b = Queue.new
