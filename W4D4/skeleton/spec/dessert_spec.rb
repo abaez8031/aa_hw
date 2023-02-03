@@ -51,7 +51,7 @@ describe Dessert do
       expect { dessert.eat(100) }.to raise_error("not enough left!")
     end
   end
-
+  
   describe "#serve" do
     it "contains the titleized version of the chef's name" do
       expect(dessert.serve).to include (chef.titleize)
