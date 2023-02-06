@@ -24,7 +24,7 @@ def dominant_octopus(array)
   dominant_octopus(right)
 end
 
-# p dominant_octopus(['fish', 'fiiish', 'fiiiiish', 'fiiiish', 'fffish', 'ffiiiiisshh', 'fsh', 'fiiiissshhhhhh'])
+p dominant_octopus(['fish', 'fiiish', 'fiiiiish', 'fiiiish', 'fffish', 'ffiiiiisshh', 'fsh', 'fiiiissshhhhhh'])
 # => "fiiiissshhhhhh"
 
 def clever_octopus(array)
