@@ -92,7 +92,37 @@ function isPrime(num) {
   return true;
 }
 
-console.log(isPrime(2));
-console.log(isPrime(10));
-console.log(isPrime(15485863));
-console.log(isPrime(3548563));
+// console.log(isPrime(2));
+// console.log(isPrime(10));
+// console.log(isPrime(15485863));
+// console.log(isPrime(3548563));
+
+function firstNPrimes(n) {
+  new_arr = [];
+  let i = 2;
+  while (new_arr.length < n) {
+    if (isPrime(i)) {
+      new_arr.push(i);
+    }
+    i += 1;
+  }
+  return new_arr;
+}
+
+// console.log(firstNPrimes(0));
+// console.log(firstNPrimes(2));
+// console.log(firstNPrimes(3));
+// console.log(firstNPrimes(5));
+
+function sumOfPrimes(n) {
+  let new_arr = firstNPrimes(n);
+  let sum = 0;
+  for (let i = 0; i < new_arr.length; i++) {
+    sum += new_arr[i];
+  }
+  return sum;
+}
+
+console.log(sumOfPrimes(0));
+console.log(sumOfPrimes(1));
+console.log(sumOfPrimes(4));
